@@ -30,9 +30,27 @@
         <span><a class="nav-link" id="sign_in" href="#"><i class="fa fa-sign-in" aria-hidden="true" style="color:white"></i>
           Sign in</a></span>
          </li>
-
       </ul>
-
+    </div>
+    <form role="form" name="register_form" action="" method="post">
+      <input name=_csrf_token type=hidden value="{{ csrf_token() }}">
+    <div class="row col-md-12" id="div_hidden" style="display: none">
+        <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                <input name="email" id="email" class="form-control input-sm" placeholder="Email" type="email">
+            </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    <input name="email_ver" id="email_ver" class="form-control input-sm" placeholder="Confirm Email" type="email">
+                </div>
+            </div>
+        <div class="col-xs-3 col-sm-3 col-md-3">
+        <input value="Sign in" class="btn btn-info btn-block" type="submit" style="background-color: #007bff">
+        </div>
+     </div>
+     </form>
+    </div>
   </div>
 </nav>
  <!-- Header with Background Image -->
