@@ -1,5 +1,5 @@
 from app import app
 from app import manager
 
-manager.run()
+# manager.run()
 app.run(debug=True)

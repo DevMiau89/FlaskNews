@@ -1,0 +1,69 @@
+{% extends "includes/base.html" %}
+
+{% block content %}
+    <!-- Page Content -->
+     <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-sm-12" style="border-right: 1px solid #C8C8C8">
+        </div>
+      </div>
+     </div>
+    <div class="container">
+      <br>
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-2">
+
+        <div class="panel-heading">
+        <h3 class="panel-title">Please sign up</h3>
+         <br>
+        </div>
+        <div class="panel-body">
+        <form role="form" name="register_form" action="" method="post">
+            <input name=_csrf_token type=hidden value="{{ csrf_token() }}">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+            <input name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name" type="text">
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input name="password" id="password" class="form-control input-sm" placeholder="Password" type="password">
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input name="email" id="email" class="form-control input-sm" placeholder="Email" type="email">
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <input name="email_ver" id="email_ver" class="form-control input-sm" placeholder="Confirm Email" type="email">
+                    </div>
+                </div>
+            </div>
+
+            <input value="Register" class="btn btn-info btn-block" type="submit" style="background-color: #007bff">
+            <br>
+        </form>
+    </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+     <br>
+    </div>
+    <!-- /.container -->
+
+{% endblock content %}
+
